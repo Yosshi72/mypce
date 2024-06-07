@@ -7,6 +7,6 @@ global:
     port: 50051
   log:
     path: "/var/log/pola/"
-    name: "mypced.log"
+    name: "polad.log"
   ted:
     enable: false

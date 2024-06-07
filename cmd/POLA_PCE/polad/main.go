@@ -31,13 +31,13 @@ type flags struct {
 func main() {
 	// Check if --version flag was passed
 	if len(os.Args) > 1 && os.Args[1] == "--version" {
-		fmt.Println("mypced " + version.Version())
+		fmt.Println("polad " + version.Version())
 		return
 	}
 
 	// Parse flags
 	f := &flags{}
-	flag.StringVar(&f.configFile, "f", "./cmd/mypced/mypced.yaml", "Specify a configuration file")
+	flag.StringVar(&f.configFile, "f", "./cmd/POLA_PCE/polad/polad.yaml", "Specify a configuration file")
 	flag.Parse()
 
 	// Read configuration file

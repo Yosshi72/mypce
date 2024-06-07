@@ -22,7 +22,7 @@ var (
 
 func newRootCmd() *cobra.Command {
 	rootCmd := &cobra.Command{
-		Use: "mypce",
+		Use: "pola",
 	}
 	rootCmd.PersistentFlags().BoolVarP(&jsonFmt, "json", "j", false, "output json format")
 	rootCmd.PersistentFlags().String("host", "127.0.0.1", "polad connection address")
