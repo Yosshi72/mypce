@@ -1,0 +1,262 @@
+{
+    &server.Session{
+        sessionID: 0x01,
+        peerAddr:  netip.Addr{
+        addr: netip.uint128{
+            hi: 0x0000000000000000,
+            lo: 0x0000ffffac10641e,
+        },
+        z: &intern.Value{
+            _:           [0]func(){},
+            cmpVal:      nil,
+            resurrected: false,
+        },
+        },
+        tcpConn: &net.TCPConn{
+        conn: net.conn{
+            fd: &net.netFD{
+            pfd: poll.FD{
+                fdmu: poll.fdMutex{
+                state: 0x0000000000000000,
+                rsema: 0x00000000,
+                wsema: 0x00000000,
+                },
+                Sysfd: 9,
+                pd:    poll.pollDesc{
+                runtimeCtx: 0x7f58a047bd50,
+                },
+                iovecs:        (*[]syscall.Iovec)(nil),
+                csema:         0x00000000,
+                isBlocking:    0x00000000,
+                IsStream:      true,
+                ZeroReadIsEOF: true,
+                isFile:        false,
+            },
+            family:      2,
+            sotype:      1,
+            isConnected: false,
+            net:         "tcp",
+            laddr:       &net.TCPAddr{
+                IP: net.IP{
+                0xac, 0x10, 0x02, 0x74,
+                },
+                Port: 4189,
+                Zone: "",
+            },
+            raddr: &net.TCPAddr{
+                IP: net.IP{
+                0xac, 0x10, 0x64, 0x1e,
+                },
+                Port: 51933,
+                Zone: "",
+            },
+            },
+        },
+        },
+        isSynced:   false,
+        srpIDHead:  0x00000001,
+        srPolicies: []table.SRPolicy{},
+        logger:     &zap.Logger{
+        core: zapcore.multiCore{
+            &zapcore.ioCore{
+            LevelEnabler: 0,
+            enc:          &zapcore.jsonEncoder{
+                EncoderConfig: &zapcore.EncoderConfig{
+                MessageKey:          "msg",
+                LevelKey:            "level",
+                TimeKey:             "ts",
+                NameKey:             "logger",
+                CallerKey:           "caller",
+                FunctionKey:         "",
+                StacktraceKey:       "stacktrace",
+                SkipLineEnding:      false,
+                LineEnding:          "\n",
+                EncodeLevel:         zapcore.LevelEncoder {...},
+                EncodeTime:          zapcore.TimeEncoder {...},
+                EncodeDuration:      zapcore.DurationEncoder {...},
+                EncodeCaller:        zapcore.CallerEncoder {...},
+                EncodeName:          zapcore.NameEncoder {...},
+                NewReflectedEncoder: func(io.Writer) zapcore.ReflectedEncoder {...},
+                ConsoleSeparator:    "",
+                },
+                buf: &buffer.Buffer{
+                bs:   []uint8{},
+                pool: buffer.Pool{
+                    p: &pool.Pool[*go.uber.org/zap/buffer.Buffer]{
+                    pool: sync.Pool{
+                        noCopy:     sync.noCopy{},
+                        local:      unsafe.Pointer(0xc000101800),
+                        localSize:  0x8,
+                        victim:     unsafe.Pointer(0x0),
+                        victimSize: 0x0,
+                        New:        func() interface {} {...},
+                    },
+                    },
+                },
+                },
+                spaced:         false,
+                openNamespaces: 0,
+                reflectBuf:     (*buffer.Buffer)(nil),
+                reflectEnc:     nil,
+            },
+            out: &os.File{
+                file: &os.file{
+                pfd: poll.FD{
+                    fdmu: poll.fdMutex{
+                    state: 0x0000000000000000,
+                    rsema: 0x00000000,
+                    wsema: 0x00000000,
+                    },
+                    Sysfd: 3,
+                    pd:    poll.pollDesc{
+                    runtimeCtx: 0x0,
+                    },
+                    iovecs:        (*[]syscall.Iovec)(nil),
+                    csema:         0x00000000,
+                    isBlocking:    0x00000001,
+                    IsStream:      true,
+                    ZeroReadIsEOF: true,
+                    isFile:        true,
+                },
+                name:        "/var/log/pola/polad.log",
+                dirinfo:     (*os.dirInfo)(nil),
+                nonblock:    false,
+                stdoutOrErr: false,
+                appendMode:  true,
+                },
+            },
+            },
+            &zapcore.ioCore{
+            LevelEnabler: 0,
+            enc:          zapcore.consoleEncoder{
+                jsonEncoder: &zapcore.jsonEncoder{
+                EncoderConfig: &zapcore.EncoderConfig{
+                    MessageKey:          "msg",
+                    LevelKey:            "level",
+                    TimeKey:             "ts",
+                    NameKey:             "logger",
+                    CallerKey:           "caller",
+                    FunctionKey:         "",
+                    StacktraceKey:       "stacktrace",
+                    SkipLineEnding:      false,
+                    LineEnding:          "\n",
+                    EncodeLevel:         zapcore.LevelEncoder {...},
+                    EncodeTime:          zapcore.TimeEncoder {...},
+                    EncodeDuration:      zapcore.DurationEncoder {...},
+                    EncodeCaller:        zapcore.CallerEncoder {...},
+                    EncodeName:          zapcore.NameEncoder {...},
+                    NewReflectedEncoder: func(io.Writer) zapcore.ReflectedEncoder {...},
+                    ConsoleSeparator:    "\t",
+                },
+                buf: &buffer.Buffer{
+                    bs:   []uint8{},
+                    pool: buffer.Pool{
+                    p: &pool.Pool[*go.uber.org/zap/buffer.Buffer]{...},
+                    },
+                },
+                spaced:         true,
+                openNamespaces: 0,
+                reflectBuf:     (*buffer.Buffer)(nil),
+                reflectEnc:     nil,
+                },
+            },
+            out: &os.File{
+                file: &os.file{
+                pfd: poll.FD{
+                    fdmu: poll.fdMutex{
+                    state: 0x0000000000000000,
+                    rsema: 0x00000000,
+                    wsema: 0x00000000,
+                    },
+                    Sysfd: 1,
+                    pd:    poll.pollDesc{
+                    runtimeCtx: 0x0,
+                    },
+                    iovecs:        (*[]syscall.Iovec)(nil),
+                    csema:         0x00000000,
+                    isBlocking:    0x00000001,
+                    IsStream:      true,
+                    ZeroReadIsEOF: true,
+                    isFile:        true,
+                },
+                name:        "/dev/stdout",
+                dirinfo:     (*os.dirInfo)(nil),
+                nonblock:    false,
+                stdoutOrErr: true,
+                appendMode:  false,
+                },
+            },
+            },
+        },
+        development: false,
+        addCaller:   false,
+        onPanic:     nil,
+        onFatal:     nil,
+        name:        "",
+        errorOutput: &zapcore.lockedWriteSyncer{
+            Mutex: sync.Mutex{
+            state: 0,
+            sema:  0x00000000,
+            },
+            ws: &os.File{
+            file: &os.file{
+                pfd: poll.FD{
+                fdmu: poll.fdMutex{
+                    state: 0x0000000000000000,
+                    rsema: 0x00000000,
+                    wsema: 0x00000000,
+                },
+                Sysfd: 2,
+                pd:    poll.pollDesc{
+                    runtimeCtx: 0x0,
+                },
+                iovecs:        (*[]syscall.Iovec)(nil),
+                csema:         0x00000000,
+                isBlocking:    0x00000001,
+                IsStream:      true,
+                ZeroReadIsEOF: true,
+                isFile:        true,
+                },
+                name:        "/dev/stderr",
+                dirinfo:     (*os.dirInfo)(nil),
+                nonblock:    false,
+                stdoutOrErr: true,
+                appendMode:  false,
+            },
+            },
+        },
+        addStack:   6,
+        callerSkip: 0,
+        clock:      zapcore.systemClock{},
+        },
+        keepAlive:       0x1e,
+        pccType:         2,
+        pccCapabilities: []pcep.CapabilityInterface{
+        &pcep.StatefulPceCapability{
+            LspUpdateCapability:        true,
+            IncludeDBVersion:           false,
+            LspInstantiationCapability: true,
+            TriggeredResync:            false,
+            DeltaLspSyncCapability:     false,
+            TriggeredInitialSync:       false,
+        },
+        &pcep.SRPceCapability{
+            UnlimitedMSD:    false,
+            SupportNAI:      false,
+            MaximumSidDepth: 0x0a,
+        },
+        &pcep.UndefinedTLV{
+            Typ:    0x001b,
+            Length: 0x0006,
+            Value:  []uint8{
+            0x00, 0x00, 0x00, 0x00, 0x2c, 0x0c,
+            },
+        },
+        &pcep.AssocTypeList{
+            AssocTypes: []pcep.AssocType{
+            0x0002, 0x0003, 0x0006, 0x0005,
+            },
+        },
+        },
+    }
+}

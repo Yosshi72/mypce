@@ -1,0 +1,14 @@
+srPolicy:
+  name: policy2
+  pcepSessionAddr: 172.16.100.30
+  srcAddr: 10.255.0.1
+  dstAddr: 10.255.0.2
+  color: 1
+  segmentList:
+    - sid: 16002
+      nai: 10.255.0.2
+    - sid: 16004
+      nai: 10.255.0.4
+    - sid: 16003
+      nai: 10.255.0.3
+    
